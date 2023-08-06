@@ -1,0 +1,79 @@
+*{
+    box-sizing: boder-box;
+    overflow: none;
+}
+
+body{
+    padding:0;
+    margin:0;
+}
+
+.page-actions-cont{
+    height:3rem;
+    background-color:#218c74;
+    display:flex;
+    align-items:flex-end
+}
+
+.page-action{
+    margin:0.5rem;
+    color:white;
+}
+
+.cell-property-actions-cont{
+    height:3rem;
+    /* padding:0.2rem; */
+    display: flex;
+    align-items: center;
+    background-color: lightsalmon;
+    gap:10px;
+}
+
+.cell-property-actions-cont>*:hover{
+    cursor:pointer;
+}
+
+.cell-property-actions-cont > select{
+    border:none;
+    border-radius:2px;
+    outline:none;
+}
+
+.formula-actions-cont{
+    height:3rem;
+    background-color: lightblue;
+}
+
+.sheet-actions-cont{
+    height:3rem;
+    background-color: lightcoral;
+}
+
+.grid-actions-cont{
+    height:calc(100vh - 3rem - 3rem - 3rem - 3rem);
+    background-color: gray;
+}
+
+.font-family-prop{
+    padding:0.2rem;
+}
+
+.font-size-prop{
+    padding:0.2;
+}
+
+.sheet-actions-cont{
+    /* display: inline-block; */
+}
+.sheet-add-icon{
+    display:inline-block
+}
+
+.sheet-folder-cont{
+    height:1rem;
+    background-color:yellow;
+    width:5rem;
+    display: inline-block;
+}
+
+
