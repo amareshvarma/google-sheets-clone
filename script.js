@@ -5,7 +5,6 @@ let addressColCont = document.querySelector(".address-col-cont");
 let addressRowCont = document.querySelector(".address-row-cont");
 let cellsCont = document.querySelector(".cells-cont");
 let addressBar = document.querySelector(".address-bar");
-// let gridCont = document.querySelector(".grid-cont");
 
 for (let i = 0; i < rows; i++) {
   let addressCol = document.createElement("div");
@@ -35,18 +34,15 @@ for (let i = 0; i < rows; i++) {
     cell.setAttribute("cid", j);
 
     rowCont.appendChild(cell);
-    
+    addListenerForAddressBarDisplay(cell, i, j);
   }
   cellsCont.appendChild(rowCont);
-  addListenerForAddressBarDisplay(cellsCont);
 }
 
-function addListenerForAddressBarDisplay() {
-  cellsCont.addEventListener("click", (e) => {
-    let rowID = parseInt(e.target.getAttribute("rid"))+1;
-    console.log("rid",e.target.getAttribute("rid"));
-    console.log("cid",e.target.getAttribute("cid"))
-    let colID = String.fromCharCode(parseInt(e.target.getAttribute("cid")) + 65);
+function addListenerForAddressBarDisplay(cell, i, j) {
+  cell.addEventListener("click", (e) => {
+    let rowID = i + 1;
+    let colID = String.fromCharCode(65 + j);
     addressBar.value = `${colID}${rowID}`;
   });
 }
